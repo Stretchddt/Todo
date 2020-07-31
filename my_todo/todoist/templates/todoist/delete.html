@@ -1,0 +1,17 @@
+{% extends 'my_todo/base.html' %}
+
+{% block content %}
+
+    <br>
+    <div class="text-center">
+    <p>Are you sure you want to delete "{{todo}}"?</p>
+
+    <a class="btn btn-outline-primary" href="{% url 'home' %}" >Cancel</a>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input class="btn btn-outline-primary" type="submit" name="Confirm">
+        </form>
+    </div>
+
+{% endblock %}

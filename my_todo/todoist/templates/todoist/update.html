@@ -1,0 +1,24 @@
+{% extends 'my_todo/base.html' %}
+
+{% block content %}
+
+    <h1>Update Todo</h1>
+
+    <div class="card text-center">
+
+        <div class="card-header">
+            <h2>Update</h2>
+        </div>
+        <br>
+
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn btn-outline-success">Update</button>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock content %}
